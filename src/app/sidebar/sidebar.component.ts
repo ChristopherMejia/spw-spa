@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+
+  @ViewChild('defaultSidebar')
+  public sidebar!: ElementRef<HTMLElement>
+
+  showHideSidebar(): void{
+    console.log(this.sidebar.nativeElement.classList);
+    this.sidebar.nativeElement.classList.remove('-translate-x-full')
+  }
 
 }
