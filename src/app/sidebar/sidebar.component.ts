@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,12 +7,27 @@ import { Component, ElementRef, ViewChild} from '@angular/core';
 })
 export class SidebarComponent {
 
+  // public getScreenWidth!: number;
+
+  // ngOnInit() {
+  //   this.getScreenWidth = window.innerWidth;
+  // }
+
   @ViewChild('defaultSidebar')
   public sidebar!: ElementRef<HTMLElement>
 
-  showHideSidebar(): void{
-    console.log(this.sidebar.nativeElement.classList);
+  showSidebar(): void{
     this.sidebar.nativeElement.classList.remove('-translate-x-full')
   }
+
+  hideSidebar(): void{
+    // console.log(this.onWindowResize());
+    this.sidebar.nativeElement.classList.add('-translate-x-full')
+  }
+
+  // @HostListener('window:resize', ['$event'])
+  // onWindowResize(): number {
+  //   return this.getScreenWidth = window.innerWidth;
+  // }
 
 }
