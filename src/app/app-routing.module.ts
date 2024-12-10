@@ -11,7 +11,7 @@ import { OtrosComponent } from './accessories/otros/otros.component';
 import { IncubadoraComponent } from './accessories/incubadora/incubadora.component';
 
 const routes: Routes = [
-  {path: 'acerca-de-ginkox', component: ContentComponent},
+  {path: 'acerca-de-nosotros', component: ContentComponent},
   {path: 'equipos/1', component: ProductComponent},
   {path: 'desfibriladores', component: AccessoriesComponent},
   {path: 'equipos/2', component: StretchersComponent},
